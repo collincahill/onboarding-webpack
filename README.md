@@ -17,6 +17,7 @@ bower install
 ```
 Then build and run a server:
 ```
-yarn run build
-yarn run serve
+yarn run start
 ```
+
+That will bundle the JS and run the dev server. Then just go to `http://localhost:8080` in your browser.
