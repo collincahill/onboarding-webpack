@@ -1,2 +1,1 @@
-import './js/rainbows.js';
-import './js/unicorns.js';
+import './components/name-box.html'

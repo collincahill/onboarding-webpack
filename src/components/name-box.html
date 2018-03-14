@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="name-box">
+  <template>
+    <style>
+      :host {
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid black;
+        margin: 5px;
+        display: block;
+      }
+    </style>
+    <p>[[name]]</p>
+  </template>
+  <script>
+    class NameBox extends Polymer.Element {
+      static get is() { return 'name-box' }
+
+      static get properties() {
+        return {
+          name: {
+            type: String,
+            value: 'Collin'
+          }
+        }
+      }
+    }
+    customElements.define(NameBox.is, NameBox);
+  </script>
+</dom-module>
