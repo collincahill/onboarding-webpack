@@ -1,0 +1,44 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="./app-header.html">
+<link rel="import" href="../../bower_components/promise-polyfill/promise-polyfill-lite.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="sample-app">
+  <template>
+    <iron-ajax
+      id="ajax"
+      auto
+      url="https://randomuser.me/api/?results=10"
+      handle-as="json"
+      lastReponse={{users}}></iron-ajax>
+
+    <header>
+      <app-header>App</app-header>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+  </template>
+  <script>
+    import format from 'date-fns/format';
+
+    class SampleApp extends Polymer.Element {
+      static get is() { return 'sample-app' }
+
+      static get properties() {
+        return {
+          today: {
+            type: String,
+            value: () => {
+              return format(new Date(), 'MM/DD/YYYY')
+            }
+          }
+        }
+      }
+    }
+    customElements.define(SampleApp.is, SampleApp);
+  </script>
+</dom-module>

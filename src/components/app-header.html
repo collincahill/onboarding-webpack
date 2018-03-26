@@ -1,0 +1,38 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="app-header">
+  <template>
+    <style>
+      :host {
+        padding: 20px 10px;
+        margin: 0;
+        box-sizing: border-box;
+        display: block;
+        border-bottom: 1px solid gray;
+      }
+      :host > div {
+        max-width: 800px;
+        margin: auto;
+      }
+    </style>
+
+    <div>
+      <slot></slot>
+    </div>
+  </template>
+  <script>
+    class AppHeader extends Polymer.Element {
+      static get is() { return 'app-header' }
+
+      static get properties() {
+        return {
+          color: {
+            type: String,
+            value: 'aliceblue'
+          }
+        }
+      }
+    }
+    customElements.define(AppHeader.is, AppHeader);
+  </script>
+</dom-module>

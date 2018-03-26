@@ -20,4 +20,4 @@ Then build and run a server:
 yarn run start
 ```
 
-That will bundle the JS and run the dev server. Then just go to `http://localhost:8080` in your browser.
+That will bundle the JS and run the dev server. Then just go to `http://localhost:4000` in your browser.

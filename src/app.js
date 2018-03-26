@@ -1,1 +1,1 @@
-import './components/name-box.html'
+import './components/sample-app.html'
